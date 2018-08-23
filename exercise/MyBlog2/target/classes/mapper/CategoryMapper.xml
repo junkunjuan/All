@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "com.lsk.dao.CategoryDao">
+	<resultMap id = "category" type = "com.lsk.model.Category">
+		<id column = "categoryId" property = "id" />
+		<result column = "categoryName" property = "name" />
+	</resultMap>
+	
+	<resultMap id = "categoryDto" type = "com.lsk.model.dto.CategoryDto">
+		<id column = "categoryId" property = "id" />
+		<result column = "categoryName" property = "name" />
+		<result column = "categoryCount" property = "count" />
+	</resultMap>
+	
+	<insert id = "save">
+		insert into t_category values(null, #{name})
+	</insert>
+	
+	<update id = "update">
+		update t_category set categoryName = #{name} where categoryId = #{id}
+	</update>
+	
+	<delete id = "delete">
+		delete from t_category where categoryId = #{id}
+	</delete>
+	
+	<select id = "all" resultMap = "categoryDto">
+		select t_category.categoryId, t_category.categoryName, count(articleId) as categoryCount
+		from t_article right join t_category on t_article.categoryId = t_category.categoryId
+		group by  t_category.categoryId
+	</select>
+	
+	<select id = "get" resultMap = "category">
+		select * from t_category where categoryId = #{id}
+	</select>
+	
+	<select id = "exist" resultType = "java.lang.Integer">
+		select * from t_article where categoryId = #{categoryId}
+	</select>
+	
+	<select id="pagenation" resultMap="categoryDto">
+        select * from t_category order by categoryId desc limit #{startIndex}, #{pageSize};
+    </select>
+    
+    <select id="count" resultType="java.lang.Integer">
+    	select count(*) as total from t_category where categoryId > 0
+    </select>
+</mapper>

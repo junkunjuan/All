@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lsk.dao.ArticleDao">
+
+	<resultMap id="ArticleLiteDto" type="com.lsk.model.dto.ArticleLiteDto">
+		<id column="articleId" property="id" />
+		<result column="title" property="title" />
+		<result column="pubDate" property="pubDate" />
+		<result column="clicks" property="clicks" />
+		<result column="remark" property="remark" />
+		<association property="user" javaType="com.lsk.model.dto.UserDto">
+			<id column="userId" property="id" />
+			<result column="imageName" property="imagePath" />
+			<result column="state" property="state" />
+			<result column="nickname" property="nickname" />
+			<result column="email" property="email" />
+			<result column="website" property="website" />
+		</association>
+	</resultMap>
+
+	<resultMap type="com.lsk.model.dto.ArticleDto" id="ArticleDto">
+		<id column="articleId" property="id" />
+		<result column="title" property="title" />
+		<result column="content" property="content" />
+		<result column="markDown" property="markDown" />
+		<result column="pubDate" property="pubDate" />
+		<result column="clicks" property="clicks" />
+		<result column="remark" property="remark" />
+		<result column="picture" property="picture" />
+		<result column="isDraft" property="isDraft" />
+		<association property="user" javaType="com.lsk.model.dto.UserDto">
+			<id column="userId" property="id" />
+			<result column="imageName" property="imagePath" />
+			<result column="state" property="state" />
+			<result column="nickname" property="nickname" />
+			<result column="email" property="email" />
+			<result column="website" property="website" />
+		</association>
+		<association property="category" javaType="com.lsk.model.Category">
+			<id column="categoryId" property="id" />
+			<result column="categoryName" property="name" />
+		</association>
+	</resultMap>
+
+	<insert id="save" parameterType="com.lsk.model.Article">
+		insert into t_article values
+		(#{id}, #{categoryId}, #{userId}, #{title}, #{content}, #{markDown},
+		#{pubDate}, #{clicks}, #{remark},
+		#{picture}, #{isDraft})
+	</insert>
+	
+	<delete id = "delete" parameterType = "com.lsk.model.Article">
+		delete from t_article where articleId = #{id}
+	</delete>
+	
+	<select id="getArticleLiteDtos" resultMap = "ArticleLiteDto" flushCache = "true">
+		select * from t_user, t_article where t_user.userId = t_articleId;
+	</select>
+	
+	<select id = "search" resultMap = "ArticleDto" parameterType = "java.lang.String">
+		select * from t_article article, t_category category, t_user tuser 
+		where article.categoryId = category.categoryId and article.userId = tuser.userId and
+		title like concat(concat('%', #{title}), '%') order by pubDate desc
+	</select>
+	
+	<select id = "getArticleDto" resultMap = "ArticleDto" parameterType = "integer">
+		select * from t_article article, t_category category, t_user tuser
+		where article.categoryId = category.categoryId and article.userId = tuser.userId and article.articleId = #{id}
+	</select>
+	
+	<select id = "count" resultType = "java.lang.Integer">
+		select count(*) from t_article where categoryId > 0
+	</select>
+	
+	<update id = "update" parameterType = "com.lsk.model.Article">
+		update t_article set categoryId = #{categoryId}, title = #{title}, content = #{content}, remark = #{remark},
+        markDown = #{markDown} where articleId = #{id}
+	</update>
+	
+	<update id = "updates" parameterType = "com.lsk.model.Article">
+		update t_article set categoryId = #{categoryId}, title = #{title}, content = #{content}, remark = #{remark},
+        pubDate = #{pubDate} where articleId = #{id}
+	</update>
+	
+	<update id = "updateArticleClicks">
+		update t_article set clicks = #{0} where articleId = #{1}
+	</update>
+	
+	<select id = "pagerAction" resultMap = "ArticleDto" parameterType = "com.lsk.util.Pager">
+		select * from t_article article, t_category category, t_user tuser where article.categoryId = category.categoryId
+		and article.userId = tuser.userId order by pubDate desc limit #{startIndex}, #{pageSize}
+	</select>
+	
+	<select id = "getNextArticleDto" parameterType = "java.lang.Integer" resultMap = "ArticleLiteDto">
+		select * from t_article where articleId = (select articleId from t_article where #{id} > articleId and categoryId > 0
+													order by articleId desc limit 1)
+	</select>
+	
+	<select id = "getPreArticleDto" parameterType = "java.lang.Integer" resultMap = "ArticleLiteDto">
+		select * from t_article where articleId = (select articleId from t_article where articleId > #{id} and categoryId > 0
+													order by articleId asc limit 1)
+	</select>
+	
+	<select id = "getByCategory" resultMap = "ArticleLiteDto">
+		select articleId, title, pubDate from t_article where categoryId = #{categoryId} order by pubDate desc
+	</select>
+	
+	<select id = "archive" resultMap = "ArticleLiteDto">
+		select articleId, title, pubDate from t_article where categoryId > 0 order by pubDate desc
+	</select>
+</mapper>
+      

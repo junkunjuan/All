@@ -1,0 +1,124 @@
+<!--<link rel="stylesheet" href="/editor/css/style.css"/>-->
+<link rel="stylesheet"
+	href="/MyBlog2/static/user/editor/css/editormd.css" />
+
+<section class="content-header">
+	#if($error)
+	<div class="callout callout-warning">
+		<h4>发表文章出现问题</h4>
+
+		<p>${error}</p>
+	</div>
+	#end
+
+</section>
+
+#if($article)
+<script type="text/javascript">
+	onload = function() {
+		document.getElementById("category${article.category.id}").selected = true;
+		document.getElementById("articletitle").value = '${article.title}';
+		document.getElementById("articleId").innerText = '${article.id}';
+		document.getElementById("myButton").innerHTML = "修改文章";
+	}
+</script>
+#end
+
+
+
+<section class="content">
+	<script src="/MyBlog2/static/user/editor/js/jquery.min.js"></script>
+	<script src="/MyBlog2/static/user/editor/js/editormd.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/MyBlog2/static/ueditor1_4_3/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/MyBlog2/static/ueditor1_4_3/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="/MyBlog2/static/ueditor1_4_3/lang/zh-cn/zh-cn.js"></script>
+
+
+	<form
+		action="#if($article)/MyBlog2/manage/article/update/${article.id}#else/MyBlog2/manage/article/create#end"
+		method="post">
+		<div class="row">
+			<div class="box box-default">
+				<div class="box-header with-border">
+					<h6>文章基本信息:</h6>
+
+					<div class="box-tools pull-right">
+						<button class="btn btn-box-tool" data-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="box-body" style="display: block;">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="articletitle">文章标题:</label> <input type="text"
+									name="title" class="form-control" id="articletitle"
+									placeholder="请输入文章标题..." />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>文章分类:</label> <select name="categoryId" id="sel"
+									class="form-control select2 select2-hidden-accessible"
+									style="width: 100%;" tabindex="-1" aria-hidden="true">
+									#foreach($category in $categories)
+									<option value="${category.id}" id="category${category.id}">${category.name}</option>
+									#end
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>文章简介:</label>
+								<textarea name="remark" class="form-control" rows="3"
+									placeholder="请输入文章简介...">#if($article)${article.remark}#end</textarea>
+							</div>
+							<textarea id="articlecontent" name="content"
+								style="display: none"></textarea>
+							<textarea id="userid" name="userId" style="display: none">${user.id}</textarea>
+							<textarea id="articleId" name="id" style="display: none"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script id="editor" type="text/plain"
+			style="width: 1024px; height: 500px;">#if($article)${article.content}#end</script>
+
+		<script type="text/javascript">
+			function Submit() {
+				document.getElementById("articlecontent").value = document
+						.getElementById("myhtmlcontent").innerHTML;
+			}
+		</script>
+
+		<script type="text/javascript">
+			//实例化编辑器
+			//建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+			var ue = UE.getEditor('editor');
+
+			function getContent() {
+				var arr = [];
+				arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+				arr.push("内容为：");
+				arr.push(UE.getEditor('editor').getContent());
+				alert(arr.join("\n"));
+			}
+		</script>
+		<div class="row">
+			<div class="col-md-3"></div>
+
+			<div class="col-md-6">
+				<button type="submit" id="myButton"
+					class="btn btn-block btn-default btn-lg"
+					onclick="javascript:Submit();">发表文章</button>
+			</div>
+		</div>
+	</form>
+</section>
