@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>择偶条件</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+	#parse("common/header.vm")
+	<div class="grid_3">
+		<div class="container">
+
+			<div class="breadcrumb1" align="center">
+				<ul>
+					<a href="/Meeting"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">择偶条件</li>
+				</ul>
+			</div>
+
+			<div class="services">
+
+				<div class="col-sm-3"></div>
+
+				<div class="col-sm-6">
+					<form name="reg_testdate" action = "search_content" method = "post">
+						<div class="form-group">
+							<label for="edit-pass">年龄</label>
+							<div class="select-block1">
+								<select name="salary">
+									<option value="">不限</option>
+									<option value="18">20以下</option>
+									<option value="25">20-30</option>
+									<option value="40">30-45</option>
+									<option value="50">45以上</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="edit-pass">身高</label>
+							<div class="select-block1">
+								<select name="education">
+									<option value="">不限</option>
+									<option value="高中及以下">160cm以下</option>
+									<option value="中专">160-170cm</option>
+									<option value="大专">170-185cm</option>
+									<option value="大学本科">185以上</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="edit-pass">体型</label>
+							<div class="select-block1">
+								<select name="bodytype">
+									<option value="">不限</option>
+									<option value="一般">一般</option>
+									<option value="瘦长">瘦长</option>
+									<option value="运动员型">运动员型</option>
+									<option value="比较胖">比较胖</option>
+									<option value="体格魁梧">体格魁梧</option>
+									<option value="壮实">壮实</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="edit-pass">收入</label>
+							<div class="select-block1">
+								<select name="salary">
+									<option value="">不限</option>
+									<option value="1000">2000以下</option>
+									<option value="3000">2000-5000</option>
+									<option value="8000">5000-10000</option>
+									<option value="15000">10000-20000</option>
+									<option value="30000">20000以上</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="edit-pass">学历</label>
+							<div class="select-block1">
+								<select name="education">
+									<option value="">不限</option>
+									<option value="高中及以下">高中及以下</option>
+									<option value="中专">中专</option>
+									<option value="大专">大专</option>
+									<option value="大学本科">大学本科</option>
+									<option value="硕士">硕士</option>
+									<option value="博士">博士</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-actions" align="center">
+							<input type="submit" id="edit-submit" name="op" value="Submit"
+								class="btn_1 submit">
+						</div>
+					</form>
+				</div>
+
+				<div class="col-sm-3"></div>
+
+				<div class="clearfix"></div>
+
+			</div>
+		</div>
+	</div>
+	#parse("common/footer.vm")
+</body>
+</html>

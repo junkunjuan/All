@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>常见问题</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<!----font-Awesome----->
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+<!----font-Awesome----->
+<script>
+	$(document).ready(function() {
+		$(".dropdown").hover(function() {
+			$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+			$(this).toggleClass('open');
+		}, function() {
+			$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+
+</head>
+<body>
+	#parse("common/header.vm")
+	<div class="grid_3">
+		<div class="container">
+			<div class="breadcrumb1">
+				<ul>
+					<a href="/Meeting"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">FAQ</li>
+				</ul>
+			</div>
+			<dl class="faq-list">
+				<dt class="faq-list_h">
+					<h4 class="marker">Q?</h4>
+					<h4>相遇网怎样收费?</h4>
+				</dt>
+				<dd>
+					<h4 class="marker1">A.</h4>
+					<p class="m_4">相遇网不存在收费服务，只存在个人赞助，完全自愿，不强迫。</p>
+				</dd>
+				<dt class="faq-list_h">
+					<h4 class="marker">Q?</h4>
+					<h4>上传照片有什么原则?</h4>
+				</dt>
+				<dd>
+					<h4 class="marker">A.</h4>
+					<p class="m_4">
+						相遇网致力于为会员提供一个安全、舒适的环境。我们有权根据我们的判断来修改或拒绝任何相片。只有通过审核的照片才能出现在网站上。请遵循以下的原则：<br>
+
+						1、照片的格式必须jpg,gif,png,bmp的格式，而且照片的大小不能超过1000K。<br>
+
+						2、相片必须有本人出现。<br> 3、禁止裸体的、淫秽的、性暗示的或其他具有攻击性的照片上传。<br>
+
+						4、具有著作版权的作品不能上传。
+					</p>
+				</dd>
+				<dt class="faq-list_h">
+					<h4 class="marker">Q?</h4>
+					<h4>我可以上传几张照片?如何上传或增加照片?</h4>
+				</dt>
+				<dd>
+					<h4 class="marker">A.</h4>
+					<p class="m_4">
+						可上传5张相片,可以通过两种途径来帮助您增加相片：<br>
+
+						○途径一：上传相片如果您已经提交了您的个人信息，您可以直接上传您的照片。一旦通过审核，您的照片将会被提交到您的个人信息里。如果需要的话，一定要在上传前修改您的照片。根据所收到的相片的数量，我们将在48小时内将您的照片放在您的个人信息里。<br>
+
+						○途径二：电邮您的相片我们会免费为您提交照片。我们将使它变的简单：<br> (1)将照片粘贴到您的邮件里<br>
+
+						(2)包括您的：姓名用户名您加入珍爱网时使用的邮件地址 ID号<br>
+
+						(3)然后将您的照片发送到1349342692@qq.com。
+					</p>
+				</dd>
+				<dt class="faq-list_h">
+					<h4 class="marker">Q?</h4>
+					<h4>我上传的照片需要经过多长时间才能出现在网上?</h4>
+				</dt>
+				<dd>
+					<h4 class="marker">A.</h4>
+					<p class="m_4">我们的工作人员将在48小时内审核您的照片，正在审核中的照片将不能出现在搜索结果中，也不能被其他会员看到。审核通过的照片将立即出现在网上。未通过审核的普通照片将被直接删除。未通过审核的形象照片如果达不到普通照片的审核标准也将被直接删除。我们将通过邮件通知您不能通过的原因。</p>
+				</dd>
+				<dt class="faq-list_h">
+					<h4 class="marker">Q?</h4>
+					<h4>为什么我要增加我的相片?</h4>
+				</dt>
+				<dd>
+					<h4 class="marker">A.</h4>
+					<p class="m_4">如果您的资料有照片，根据我们10年来的跟踪发现：男性会员有19倍的倾向去看一个带相片的女会员资料，而女会员也会有11倍的倾向只查看带相片的男会员资料。同时，上传了相片的会员比没上传相片的会员高16.8倍的机会被浏览。因此，立即上传相片让您更具魅力和吸引力吧。我们的搜索引擎会给带相片的会员的曝光率。</p>
+				</dd>
+
+			</dl>
+		</div>
+	</div>
+	#parse("common/footer.vm")
+</body>
+</html>

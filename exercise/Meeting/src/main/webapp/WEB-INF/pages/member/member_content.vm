@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>个人资料</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<script src="/Meeting/static/js/province_city.js"></script>
+<script src="/Meeting/static/js/ajaxfileupload.js"></script>
+<script type="text/javascript">
+	var national = [ "汉族", "壮族", "满族", "回族", "苗族", "维吾尔族", "土家族", "彝族", "蒙古族",
+			"藏族", "布依族", "侗族", "瑶族", "朝鲜族", "白族", "哈尼族", "哈萨克族", "黎族", "傣族",
+			"畲族", "傈僳族", "仡佬族", "东乡族", "高山族", "拉祜族", "水族", "佤族", "纳西族", "羌族",
+			"土族", "仫佬族", "锡伯族", "柯尔克孜族", "达斡尔族", "景颇族", "毛南族", "撒拉族", "布朗族",
+			"塔吉克族", "阿昌族", "普米族", "鄂温克族", "怒族", "京族", "基诺族", "德昂族", "保安族",
+			"俄罗斯族", "裕固族", "乌孜别克族", "门巴族", "鄂伦春族", "独龙族", "塔塔尔族", "赫哲族", "珞巴族" ];
+	window.onload = function() {
+		var nat = document.getElementById("national");
+		for (var i = 0; i < national.length; i++) {
+			var option = document.createElement('option');
+			option.value = national[i];
+			var txt = document.createTextNode(national[i]);
+			option.appendChild(txt);
+			nat.appendChild(option);
+		}
+		document.getElementById("${user.age}").selected = true;
+		document.getElementById("${user.marriage}").selected = true;
+		document.getElementById("${user.drink}").checked = true;
+		document.getElementById("${user.smoke}").checked = true;
+		document.getElementById("${user.wage}").selected = true;
+		document.getElementById("${user.education}").selected = true;
+		document.getElementById("${user.body}").selected = true;
+		document.getElementById("${user.house}").selected = true;
+		document.getElementById("${user.religion}").selected = true;
+	}
+
+	$(document).ready(function() {
+		$(".dropdown").hover(function() {
+			$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+			$(this).toggleClass('open');
+		}, function() {
+			$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+	#parse("common/header.vm")
+
+	<div class="grid_3">
+		<div class="container">
+
+			<div class="breadcrumb1" align="center">
+				<ul>
+					<a href="/Meeting"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">个人资料</li>
+				</ul>
+			</div>
+
+			<div class="services">
+
+
+				<div class="col-sm-1"></div>
+				<div class="col-sm-5 login_left">
+
+					<div class="con4">
+						#if($user.imgPath)<img src="${user.imgPath}" alt=""
+							id="avatarShow" width="238px" height="200px"> #else <img
+							src="" alt="" id="avatarShow" width="238px" height="200px">#end
+						<span class="btn upload">上传头像<input type="file" name="file"
+							id="file" onchange="uploadImg()" class="upload_pic"> <input
+							type="hidden" name="avatar" id="avatar"></span>
+					</div>
+					<form name="reg_testdate" action="member_content" method="post">
+						<div class="form-group">
+							<label for="edit-
+							name">姓名</label> <input type="text"
+								id="edit-name" name="userName" value="${user.userName}"
+								size="60" maxlength="60" class="form-text required">
+						</div>
+
+						<div class="form-group">
+							<label for="edit-name">年龄</label>
+							<div class="select-block1">
+								<select name="age"> 
+									<option value="">不限</option>
+									<option value="18" id = "18">18</option>
+									<option value="19" id = "19">19</option>
+									<option value="20" id = "20">20</option>
+									<option value="21" id = "21">21</option>
+									<option value="22" id = "22">22</option>
+									<option value="23" id = "23">23</option>
+									<option value="24" id = "24">24</option>
+									<option value="25" id = "25">25</option>
+									<option value="26" id = "26">26</option>
+									<option value="27" id = "27">27</option>
+									<option value="28" id = "28">28</option>
+									<option value="29" id = "29">29</option>
+									<option value="30" id = "30">30</option>
+									<option value="31" id = "31">31</option>
+									<option value="32" id = "32">32</option>
+									<option value="33" id = "33">33</option>
+									<option value="34" id = "34">34</option>
+									<option value="35" id = "35">35</option>
+									<option value="36" id = "36">36</option>
+									<option value="37" id = "37">37</option>
+									<option value="38" id = "38">38</option>
+									<option value="39" id = "39">39</option>
+									<option value="40" id = "40">40</option>
+									<option value="41" id = "41">41</option>
+									<option value="42" id = "42">42</option>
+									<option value="43" id = "43">43</option>
+									<option value="44" id = "44">44</option>
+									<option value="45" id = "45">45</option>
+									<option value="46" id = "46">46</option>
+									<option value="47" id = "47">47</option>
+									<option value="48" id = "48">48</option>
+									<option value="49" id = "49">49</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="edit-name">身高</label> <input
+								type="text" id="edit-name" name="height" value="${user.height}"
+								size="60" maxlength="60" class="form-text required">
+						</div>
+						<div class="form-group">
+							<label for="edit-name">体重</label> 
+							<input
+								type="text" id="edit-name" name="weight" value="${user.weight}"
+								size="60" maxlength="60" class="form-text required">
+						</div>
+
+						<div class="form-group">
+							<label for="edit-pass">婚姻情况</label>
+							<div class="select-block1">
+								<select name="marriage">
+									<option value="">不限</option>
+									<option value="未婚" id = "未婚">未婚</option>
+									<option value="离异" id = "离异">离异</option>
+									<option value="丧偶" id = "丧偶">丧偶</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<tr class="opened">
+								<td class="day_label">是否喝酒 :</td>
+								<td class="day_value">
+									<input type="radio" name="drink" value="DYes" id = "DYes"> Yes 
+									<input type="radio" name="drink" value="DNo" id = "DNo" checked=""> No
+								</td>
+							</tr>
+						</div>
+
+						<div class="form-group">
+							<tr class="opened">
+								<td class="day_label">是否吸烟 :</td>
+								<td class="day_value">
+									<input type="radio" name="smoke" value="SYes" id = "SYes"> Yes 
+									<input type="radio" name="smoke" value="SNo" id = "SNo" checked=""> No
+								</td>
+							</tr>
+						</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label for="edit-name">职业</label> 
+						<input type="text"
+							id="edit-name" name="career" value="${user.career}" size="60" maxlength="60"
+							class="form-text required">
+					</div>
+					<div class="form-group">
+						<label for="edit-pass">工资收入</label>
+						<div class="select-block1">
+							<select name="wage">
+								<option value="">收入</option>
+								<option value="2000以下" id = "2000以下">2000以下</option>
+								<option value="2000-5000" id = "2000-5000">2000-5000</option>
+								<option value="5000-10000" id = "5000-10000">5000-10000</option>
+								<option value="10000-20000" id = "10000-20000">10000-20000</option>
+								<option value="20000以上" id = "20000以上">20000以上</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-pass">学历</label>
+						<div class="select-block1">
+							<select name="education">
+								<option value="">不限</option>
+								<option value="高中及以下" id = "高中及以下">高中及以下</option>
+								<option value="中专" id = "中专">中专</option>
+								<option value="大专" id = "大专">大专</option>
+								<option value="大学本科" id = "大学本科">大学本科</option>
+								<option value="硕士" id = "硕士">硕士</option>
+								<option value="博士" id = "博士">博士</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-pass">体型</label>
+						<div class="select-block1">
+							<select name="body">
+								<option value="">请选择</option>
+								<option value="一般" id = "一般">一般</option>
+								<option value="瘦长" id = "瘦长">瘦长</option>
+								<option value="运动员型" id = "运动员型">运动员型</option>
+								<option value="比较胖" id = "比较胖">比较胖</option>
+								<option value="体格魁梧" id = "体格魁梧">体格魁梧</option>
+								<option value="壮实" id = "壮实">壮实</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-pass">住房</label>
+						<div class="select-block1">
+							<select name="house">
+								<option value="">请选择</option>
+								<option value="和家人同住" id = "和家人同住">和家人同住</option>
+								<option value="已购房" id = "已购房">已购房</option>
+								<option value="租房" id = "租房">租房</option>
+								<option value="打算婚后购房" id = "打算婚后购房">打算婚后购房</option>
+								<option value="单位宿舍" id = "单位宿舍">单位宿舍</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-pass">宗教</label>
+						<div class="select-block1">
+							<select name="religion">
+								<option value="">请选择</option>
+								<option value="不信教" id = "不信教">不信教</option>
+								<option value="道教" id = "道教">道教</option>
+								<option value="佛教" id = "佛教">佛教</option>
+								<option value="伊斯兰教" id = "伊斯兰教">伊斯兰教</option>
+								<option value="基督教" id = "基督教">基督教</option>
+								<option value="天主教" id = "天主教">天主教</option>
+								<option value="儒家门徒" id = "儒家门徒">儒家门徒</option>
+								<option value="不可知论者" id = "不可知论者">不可知论者</option>
+								<option value="其他宗教" id = "其他宗教">其他宗教</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-pass">民族</label>
+						<div class="select-block1">
+							<select id="national" name="ethnic"></select>
+						</div>
+					</div>
+
+					<div class="age_select">
+						<label for="edit-pass">籍贯</label>
+						<div class="age_grid">
+							<div class="col-sm-4 form_box">
+								<div class="select-block1">
+									<select name="province" id="to_cn"
+										onchange="set_city(this, document.getElementById('city')); WYL();"
+										class=login_text_input>
+										<option value="">省</option>
+										<option value=台湾>台湾</option>
+										<option value=北京>北京</option>
+										<option value=上海>上海</option>
+										<option value=天津>天津</option>
+										<option value=重庆>重庆</option>
+										<option value=河北省>河北省</option>
+										<option value=山西省>山西省</option>
+										<option value=辽宁省>辽宁省</option>
+										<option value=吉林省>吉林省</option>
+										<option value=黑龙江省>黑龙江省</option>
+										<option value=江苏省>江苏省</option>
+										<option value=浙江省>浙江省</option>
+										<option value=安徽省>安徽省</option>
+										<option value=福建省>福建省</option>
+										<option value=江西省>江西省</option>
+										<option value=山东省>山东省</option>
+										<option value=河南省>河南省</option>
+										<option value=湖北省>湖北省</option>
+										<option value=湖南省>湖南省</option>
+										<option value=广东省>广东省</option>
+										<option value=海南省>海南省</option>
+										<option value=四川省>四川省</option>
+										<option value=贵州省>贵州省</option>
+										<option value=云南省>云南省</option>
+										<option value=陕西省>陕西省</option>
+										<option value=甘肃省>甘肃省</option>
+										<option value=青海省>青海省</option>
+										<option value=内蒙古>内蒙古</option>
+										<option value=广西>广西</option>
+										<option value=西藏>西藏</option>
+										<option value=宁夏>宁夏</option>
+										<option value=新疆>新疆</option>
+										<option value=香港>香港</option>
+										<option value=澳门>澳门</option>
+									</select>
+
+								</div>
+							</div>
+							<div class="col-sm-4 form_box2">
+								<div class="select-block1">
+									<select id="city" name="city" class=login_text_input>
+										<option value="">市</option>
+										
+									</select>
+								</div>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="edit-name">个人介绍</label>
+						<textarea class="form-control bio" placeholder="" rows="3"
+							style="height: 100px" name="introducation">#if($user.introducation) ${user.introducation} #end</textarea>
+					</div>
+
+				</div>
+
+				<div class="form-actions" align="center">
+					<input type="submit" id="edit-submit" name="op" value="Submit"
+						class="btn_1 submit">
+				</div>
+				</form>
+
+
+				<div class="clearfix"></div>
+
+			</div>
+		</div>
+	</div>
+
+	#parse("common/footer.vm")
+	<script>
+		//ajax提交信息
+		function uploadImg() {
+			if ($("#file").val() != "") {
+				$.ajaxFileUpload({
+					type : "POST",
+					url : "uploadFile",
+					dataType : "json",
+					fileElementId : "file", // 文件的id
+					success : function(d) {
+						if (d.code == 0) {
+							//alert("上传成功");
+							//图片显示
+							$("#avatar").attr("value", d.data.url);
+							$("#avatarShow").attr("src", d.data.url);
+						}
+					},
+					error : function() {
+						alert("上传失败");
+					},
+				});
+			} else {
+				alert("请先选择文件");
+			}
+		}
+	</script>
+
+</body>
+</html>

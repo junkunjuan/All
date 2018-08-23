@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>关于</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<!----font-Awesome----->
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+<!----font-Awesome----->
+<script>
+	$(document).ready(function() {
+		$(".dropdown").hover(function() {
+			$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+			$(this).toggleClass('open');
+		}, function() {
+			$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+
+</head>
+<body>
+	#parse("common/header.vm")
+	<div class="grid_3">
+		<div class="container">
+			<div class="breadcrumb1">
+				<ul>
+					<a href="index.html"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">关于</li>
+				</ul>
+			</div>
+			<div class="about">
+				<div class="col-md-6 about_left">
+					<img src="images/a3.jpg" class="img-responsive" alt="" />
+				</div>
+				<div class="col-md-6 about_right">
+					<h1>关于我们</h1>
+					<p>我们是广师大研发团队，这是我们为广师大单身狗研发的相亲网站，力求解决广师大积累已久的僧多粥少问题</p>
+					<div class="accordation">
+						<div class="jb-accordion-wrapper">
+							<div class="jb-accordion-title">
+								致谢1
+								<button type="button" class="jb-accordion-button"
+									data-toggle="collapse" data-target="#accordion-1-">
+									<i class="fa fa-angle-down"> </i>
+								</button>
+							</div>
+							<p>
+								<!-- /.accordion-title -->
+							</p>
+							<div id="accordion-1-" class="jb-accordion-content collapse in"
+								style="height: auto;">
+								<p>感谢吴世枫老师</p>
+							</div>
+							<p>
+								<!-- /.collapse -->
+							</p>
+						</div>
+						<div class="jb-accordion-wrapper">
+							<div class="jb-accordion-title">
+								致谢2
+								<button type="button" class="jb-accordion-button"
+									data-toggle="collapse" data-target="#accordion2-">
+									<i class="fa fa-angle-down"> </i>
+								</button>
+							</div>
+							<p>
+								<!-- /.accordion-title -->
+							</p>
+							<div id="accordion2-" class="jb-accordion-content collapse ">
+								<p>感谢邹欣大佬</p>
+							</div>
+							<p>
+								<!-- /.collapse -->
+							</p>
+						</div>
+						<div class="jb-accordion-wrapper">
+							<div class="jb-accordion-title">
+								致谢3
+								<button type="button" class="jb-accordion-button"
+									data-toggle="collapse" data-target="#accordion3">
+									<i class="fa fa-angle-down"> </i>
+								</button>
+							</div>
+							<p>
+								<!-- /.accordion-title -->
+							</p>
+							<div id="accordion3" class="jb-accordion-content collapse ">
+								<p>感谢曾晖助理</p>
+							</div>
+							<p>
+								<!-- /.collapse -->
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about_middle">
+		<div class="container">
+			<h2>精英用户</h2>
+			<div class="about_middle-grid1">
+				<div class="col-sm-6 testi_grid list-item-0">
+					<blockquote class="testi_grid_blockquote">
+						<figure class="featured-thumbnail">
+							<img src="images/a1.jpg" class="img-responsive" alt="" />
+						</figure>
+						<div>
+							<a href="#">在这里，我找到了爱情。</a>
+							<div class="clearfix"></div>
+						</div>
+					</blockquote>
+
+				</div>
+				<div class="col-sm-6 testi_grid list-item-1">
+					<blockquote class="testi_grid_blockquote">
+						<figure class="featured-thumbnail">
+							<img src="images/a2.jpg" class="img-responsive" alt="" />
+						</figure>
+						<div>
+							<a href="#">感谢相遇网，让我遇见爱。</a>
+							<div class="clearfix"></div>
+						</div>
+					</blockquote>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="about_middle-grid2">
+				<div class="col-sm-6 testi_grid list-item-0">
+					<blockquote class="testi_grid_blockquote">
+						<figure class="featured-thumbnail">
+							<img src="images/a9.jpg" class="img-responsive" alt="" />
+						</figure>
+						<div>
+							<a href="#">我爱你 我的爱人</a>
+							<div class="clearfix"></div>
+						</div>
+					</blockquote>
+					</small>
+				</div>
+				<div class="col-sm-6 testi_grid list-item-1">
+					<blockquote class="testi_grid_blockquote">
+						<figure class="featured-thumbnail">
+							<img src="images/a10.jpg" class="img-responsive" alt="" />
+						</figure>
+						<div>
+							<a href="#">mua 我也爱你</a>
+							<div class="clearfix"></div>
+						</div>
+					</blockquote>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="about_bottom">
+		<div class="container">
+			<h3>开发团队</h3>
+			<div class="col-md-3 about_grid1">
+				<ul class="posts-grid our-team">
+					<li class="list-item-1">
+						<figure class="thumbnail_1 thumbnail">
+							<a href="#"><img src="images/a4.jpg" class="img-responsive"
+								alt="" /></a>
+							<div class="post_networks">
+								<ul>
+									<li class="network_0"><a href="#" title=""><i
+											class="fa fa-facebook"></i></a></li>
+								</ul>
+							</div>
+						</figure>
+						<div class="desc">
+							<h4>
+								<a href="#">丰哥</a>
+							</h4>
+							<p>情场浪子</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 about_grid1">
+				<ul class="posts-grid our-team">
+					<li class="list-item-1">
+						<figure class="thumbnail_1 thumbnail">
+							<a href="#"><img src="images/a5.jpg" class="img-responsive"
+								alt="" /></a>
+							<div class="post_networks">
+								<ul>
+									<li class="network_0"><a href="#" title=""><i
+											class="fa fa-facebook"></i></a></li>
+								</ul>
+							</div>
+						</figure>
+						<div class="desc">
+							<h4>
+								<a href="#">茂哥</a>
+							</h4>
+							<p>颜值担当</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 about_grid1">
+				<ul class="posts-grid our-team">
+					<li class="list-item-1">
+						<figure class="thumbnail_1 thumbnail">
+							<a href="#"><img src="images/a6.jpg" class="img-responsive"
+								alt="" /></a>
+							<div class="post_networks">
+								<ul>
+									<li class="network_0"><a href="#" title=""><i
+											class="fa fa-facebook"></i></a></li>
+								</ul>
+							</div>
+						</figure>
+						<div class="desc">
+							<h4>
+								<a href="#">龙爷</a>
+							</h4>
+							<p>无敌是多么寂寞</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 about_grid1">
+				<ul class="posts-grid our-team">
+					<li class="list-item-1">
+						<figure class="thumbnail_1 thumbnail">
+							<a href="#"><img src="images/a7.jpg" class="img-responsive"
+								alt="" /></a>
+							<div class="post_networks">
+								<ul>
+									<li class="network_0"><a href="#" title=""><i
+											class="fa fa-facebook"></i></a></li>
+								</ul>
+							</div>
+						</figure>
+						<div class="desc">
+							<h4>
+								<a href="#">权哥</a>
+							</h4>
+							<p>呵呵</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	#parse("common/footer.vm")
+</body>
+</html>

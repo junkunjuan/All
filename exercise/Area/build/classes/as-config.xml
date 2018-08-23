@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<areasupport>
+	<jdbc>
+		<url>jdbc:mysql://localhost:3306/meeting</url>
+		<user>root</user>
+		<password>525057</password>
+		<driver>com.mysql.jdbc.Driver</driver>
+		<initialPoolSize>10</initialPoolSize>
+		<minPoolSize>5</minPoolSize>
+		<maxPoolSize>50</maxPoolSize>
+		<maxStatements>100</maxStatements>
+		<maxIdleTime>60</maxIdleTime>
+	</jdbc>
+	<webservice>
+		<address>http://0.0.0.0:8080/areasupport</address>
+	</webservice>
+	<rmi>
+		<name>rmi://0.0.0.0:8080/areasupport</name>
+		<port>8080</port>
+	</rmi>
+</areasupport>

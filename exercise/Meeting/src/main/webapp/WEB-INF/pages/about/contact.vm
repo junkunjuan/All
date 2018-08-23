@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>联系我们</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<!----font-Awesome----->
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+<!----font-Awesome----->
+<script>
+	$(document).ready(function() {
+		$(".dropdown").hover(function() {
+			$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+			$(this).toggleClass('open');
+		}, function() {
+			$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+
+</head>
+<body>
+	#parse("common/header.vm")
+	<div class="grid_3">
+		<div class="container">
+			<div class="breadcrumb1">
+				<ul>
+					<a href="/Meeting"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">联系我们</li>
+				</ul>
+			</div>
+			<div class="grid_5">
+				<p>
+					内容报道合作：欢迎各类媒体、影视剧公司、制作公司、专业网站、出版社、协会等与我们联系，在各类文字、图片、音视频资讯等方面建立长期合作。移动增值产品、语音增值业务——WAP、订阅、下载、彩铃、IVR（交互式语音应答）<br>
+					活动合作：欢迎各方与相遇网洽谈推广会议、论坛、演唱会、大奖赛、巡展或体育赛事等各类活动。通过相遇的报道推广，扩大相关活动的影响力。No.8
+					love Plaza Courtyard 10, the West XiBeiWang E.Rd HaiDian District
+					Beijing
+				</p>
+				<address class="addr row">
+					<dl class="grid_4">
+						<dt>联系地址 :</dt>
+						<dd>
+							广师大春晖园 <br>
+
+						</dd>
+					</dl>
+					<dl class="grid_4">
+						<dt>电话:</dt>
+						<dd>
+							13611457040 <br>
+						</dd>
+					</dl>
+					<dl class="grid_4">
+						<dt>电子邮箱 :</dt>
+						<dd>
+							1349342692@qq.com</a>
+						</dd>
+					</dl>
+				</address>
+			</div>
+		</div>
+	</div>
+	<div class="about_middle">
+		<div class="container">
+			<h2>Contact Form</h2>
+			<form id="contact-form" class="contact-form">
+				<fieldset>
+					<input type="text" class="text" placeholder="" value="Name"
+						onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Name';}">
+					<textarea value="Message" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+					<input name="submit" type="submit" id="submit" value="Submit">
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	#parse("common/footer.vm")
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace  = "com.meeting.dao.LoginDao">
+	<resultMap id = "People" type = "com.meeting.model.People">
+		<id column = "id" property = "id" />
+		<result column = "name" property = "userName" />
+		<result column = "password" property = "userPassword" />
+		<result column = "email" property = "email" />
+		<result column = "sex" property = "sex"/>
+	</resultMap>
+	
+	<select id = "login" resultMap = "People">
+		select * from t_user where name = #{userName} and password = #{userPassword}
+	</select>
+</mapper>

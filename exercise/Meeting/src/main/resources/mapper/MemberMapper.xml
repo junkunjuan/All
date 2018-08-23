@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace  = "com.meeting.dao.MemberDao">
+	<resultMap id = "People" type = "com.meeting.model.People">
+		<id column = "id" property = "id" />
+		<result column = "name" property = "userName" />
+		<result column = "password" property = "userPassword" />
+		<result column = "email" property = "email" />
+		<result column = "sex" property = "sex"/>
+		<result column = "age" property = "age"/>
+		<result column = "height" property = "height"/>
+		<result column = "weight" property = "weight"/>
+		<result column = "marriage" property = "marriage"/>
+		<result column = "drink" property = "drink"/>
+		<result column = "smoke" property = "smoke"/>
+		<result column = "career" property = "career"/>
+		<result column = "wage" property = "wage"/>
+		<result column = "education" property = "education"/>
+		<result column = "body" property = "body"/>
+		<result column = "house" property = "house"/>
+		<result column = "religion" property = "religion"/>
+		<result column = "ethnic" property = "ethnic"/>
+		<result column = "province" property = "province"/>
+		<result column = "city" property = "city"/>
+		<result column = "introducation" property = "introducation"/>
+	</resultMap>
+	
+	<update id = "updateMember" parameterType = "com.meeting.model.People">
+		update t_user set name = #{userName}, age = #{age}, height = #{height},
+				weight = #{weight}, marriage = #{marriage}, drink = #{drink},
+				smoke = #{smoke}, career = #{career}, wage = #{wage}, education = #{education},
+				body = #{body}, house = #{house}, religion = #{religion}, ethnic = #{ethnic},
+				province = #{province}, city = #{city}, introducation = #{introducation} 
+		where email = #{email}
+	</update>
+</mapper>

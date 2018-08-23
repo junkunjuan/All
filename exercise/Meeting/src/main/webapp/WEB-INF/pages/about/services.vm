@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>服务</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<link href="/Meeting/static/css/bootstrap-3.1.1.min.css"
+	rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/Meeting/static/js/jquery.min.js"></script>
+<script src="/Meeting/static/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/Meeting/static/css/style.css" rel='stylesheet'
+	type='text/css' />
+<!----font-Awesome----->
+<link href="/Meeting/static/css/font-awesome.css" rel="stylesheet">
+<!----font-Awesome----->
+<script>
+	$(document).ready(function() {
+		$(".dropdown").hover(function() {
+			$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+			$(this).toggleClass('open');
+		}, function() {
+			$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+			$(this).toggleClass('open');
+		});
+	});
+</script>
+
+</head>
+<body>
+	#parse("common/header.vm")
+	<div class="grid_3">
+		<div class="container">
+			<div class="breadcrumb1">
+				<ul>
+					<a href="/Meeting"><i class="fa fa-home home_1"></i></a>
+					<span class="divider">&nbsp;|&nbsp;</span>
+					<li class="current-page">服务</li>
+				</ul>
+			</div>
+			<div class="services">
+				<div class="page_header">
+					<h1>服务</h1>
+					<h3>真理惟一可靠的标准就是永远自相符合。 —— 欧文</h3>
+					<p>土地是以它的肥沃和收获而被估价的；才能也是土地，不过它生产的不是粮食，而是真理。如果只能滋生瞑想和幻想的话，即使再大的才能也只是砂地或盐池，那上面连小草也长不出来的。</p>
+				</div>
+				<div class="services_top">
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-heart-o icon_4"> </i>
+						<h4>有种爱叫做放手</h4>
+						<p>你的笑颜，如一道清泉，流动清澈的情缘，漂洗我心的蜜甜，触动我情的涅盘，爱你是我最大的选取权，永远是不变的宣言。</p>
+					</div>
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-lemon-o icon_4"> </i>
+						<h4>愉悦其实真的狠简单，有你有事做</h4>
+						<p>初恋像柠檬，虽酸却耐人寻味；热恋像火焰，虽热却不能自拔；失恋像伤疤，虽痛却无法释怀。因此咱们要懂得呵护感情！</p>
+					</div>
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-thumbs-o-up icon_4"> </i>
+						<h4>其实，我一向都在你身后，就差你一个回头。</h4>
+						<p>你爱我吗？如果是，请承担一切感情义务，即每一天想我多一点，每一天爱我多一点，每一天关心多一点，每一天联系多一点，必须要完成哟！</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="services_top1">
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-smile-o icon_4"> </i>
+						<h4>我爱你，胜过爱自我。</h4>
+						<p>握不到你的手，但感觉到你的温柔。想见你，却是经常在梦中，想说爱你，却只能在心里！此时此刻，真的好想你。</p>
+					</div>
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-wheelchair icon_4"> </i>
+						<h4>我很傻，我很笨，我有爱我的你。</h4>
+						<p>婉转浑坚的旋律，只为你弹奏；幸祸的白字，只为你而书写；调皮的情话，只为你而跳静；你，便是这么的不一样凡响。</p>
+					</div>
+					<div class="col-sm-4 item_content">
+						<i class="fa fa-spinner icon_4"> </i>
+						<h4>咱们坚信，咱们永远一齐。</h4>
+						<p>你是我的天空，时晴时雨；你是我的风景，山水相依；你是我的梦境，梦中有你；你是我的动力，让我进取。爱你，亘古不变！</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	#parse("common/footer.vm")
+</body>
+</html>
